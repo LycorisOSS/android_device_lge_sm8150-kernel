@@ -16,6 +16,9 @@ BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_PATH)/dtb
 # Kernel modules
 KERNEL_MODULES := $(wildcard $(TARGET_KERNEL_PATH)/modules/*.ko)
 
+# Kernel headers
+PRODUCT_VENDOR_KERNEL_HEADERS += device/lge/sm8150-kernel/kernel-headers
+
 # Image (dtbo)
 ifneq ($(filter alphalm alphaplus,$(shell echo $(TARGET_PRODUCT) | sed 's/^statix_//')),)
 BOARD_PREBUILT_DTBOIMAGE := $(TARGET_KERNEL_PATH)/dtbo/alpha/dtbo.img
